@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Screen Saver</title>
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		@keyframes MovingBox{
+			0%{
+				top:calc(50% - 75px);
+				left:0;
+				transform: rotate(45deg);
+				background-color: violet;
+			}
+			25%{
+				top: calc(100% - 75px);
+				left:calc(50% - 75px);
+				transform:rotate(135deg);
+				background-color: red;
+			}
+			
+			50%{
+				left:calc(100% - 75px);
+				top:calc(50% - 75px);
+				transform:rotate(225deg);
+				background-color: blue;
+
+			}
+			75%{
+				top:0;
+				left:calc(50% - 75px);
+				transform: rotate(315deg);
+				background-color: green;
+
+			}
+			100%{
+				top:calc(50% - 75px);
+				left:0;
+				transform:rotate(405deg);	
+				background-color: orange;
+					}
+				}
+		.move_box{
+			border:2px solid black;
+			width:75px;
+			height:75px;
+			top:0;
+			left:0;
+			position: fixed;
+			background-color: indigo;
+			animation: MovingBox;
+			animation-duration: 10s;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+			animation-direction: normal;
+			animation-iteration-count: infinite;
+		}
+	</style>
+</head>
+<body>
+	<div class="move_box"></div>
+</body>
+</html>
